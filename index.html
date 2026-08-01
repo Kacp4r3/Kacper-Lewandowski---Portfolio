@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kacper Lewandowski — Junior Frontend</title>
+  <meta name="description" content="Portfolio junior frontendu: HTML, CSS, Tailwind, JavaScript. Uczę się i celuję w Shopify.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="site-bg min-h-screen text-paper">
+
+  <header class="sticky top-0 z-50 border-b border-line bg-ink">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 md:px-8">
+      <a href="#top" class="font-mono text-lg font-semibold">
+        Kacper<span class="text-signal"> Lewandowski</span>
+      </a>
+
+      <nav class="hidden items-center gap-8 lg:flex" aria-label="Główne">
+        <a href="#o-mnie" class="nav-link text-sm font-medium">O mnie</a>
+        <a href="#umiejetnosci" class="nav-link text-sm font-medium">Umiejętności</a>
+        <a href="#nauka" class="nav-link text-sm font-medium">Nauka</a>
+        <a href="#shopify" class="nav-link text-sm font-medium">Shopify</a>
+        <a href="#kontakt" class="nav-link text-sm font-medium">Kontakt</a>
+      </nav>
+
+      <a href="#kontakt" class="btn-primary hidden !px-4 !py-2 text-sm lg:inline-flex">Napisz</a>
+
+      <button
+        id="menu-toggle"
+        type="button"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-md border border-line lg:hidden"
+      >
+        <i id="menu-icon" class="fa-solid fa-bars text-lg"></i>
+      </button>
+    </div>
+
+    <!-- menu telefon-->
+    <div id="mobile-menu" class="mobile-menu border-t border-line bg-panel lg:hidden">
+      <nav class="flex flex-col gap-1 px-5 py-4">
+        <a href="#o-mnie" class="mobile-link rounded-md px-3 py-3 text-fog hover:bg-panel-2 hover:text-signal">O mnie</a>
+        <a href="#umiejetnosci" class="mobile-link rounded-md px-3 py-3 text-fog hover:bg-panel-2 hover:text-signal">Umiejętności</a>
+        <a href="#nauka" class="mobile-link rounded-md px-3 py-3 text-fog hover:bg-panel-2 hover:text-signal">Nauka</a>
+        <a href="#shopify" class="mobile-link rounded-md px-3 py-3 text-fog hover:bg-panel-2 hover:text-signal">Shopify</a>
+        <a href="#kontakt" class="btn-primary mobile-link mt-2 w-full">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="border-b border-line">
+      <div class="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:px-8 md:py-24 lg:grid-cols-2 lg:items-center">
+        <div>
+          <p class="section-label mb-4">portfolio · junior frontend</p>
+          <h1 class="text-5xl font-extrabold leading-tight tracking-tight sm:text-6xl">
+            Cześć — uczę się<br>
+            budować rzeczy<br>
+            <span class="text-signal">w sieci.</span>
+          </h1>
+          <p class="mt-5 max-w-lg text-lg text-fog">
+            Znam HTML, CSS, Tailwind i JavaScript. Jestem na etapie nauki i spokojnie celuję w rozwój sklepów na Shopify.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#umiejetnosci" class="btn-primary">Zobacz skille</a>
+            <a href="#shopify" class="btn-ghost">Plan Shopify</a>
+          </div>
+          <p class="mt-8 font-mono text-xs text-mute">
+            status: <span class="text-signal">learning</span>
+          </p>
+        </div>
+
+        <div class="terminal">
+          <div class="terminal-bar">
+            <span class="terminal-dot bg-[#ff5f56]"></span>
+            <span class="terminal-dot bg-[#ffbd2e]"></span>
+            <span class="terminal-dot bg-[#27c93f]"></span>
+            <span class="ml-3 font-mono text-xs text-mute">about.js</span>
+          </div>
+          <div class="space-y-1 p-5 text-fog">
+            <p class="code-line"><span class="text-link">const</span> <span class="text-paper">me</span> = {</p>
+            <p class="code-line pl-4">role: <span class="text-warn">"Junior Frontend"</span>,</p>
+            <p class="code-line pl-4">stack: [<span class="text-warn">"HTML"</span>, <span class="text-warn">"CSS"</span>, <span class="text-warn">"Tailwind"</span>, <span class="text-warn">"JS"</span>],</p>
+            <p class="code-line pl-4">stage: <span class="text-warn">"learning"</span>,</p>
+            <p class="code-line pl-4">next: <span class="text-warn">"Shopify"</span></p>
+            <p class="code-line">};</p>
+            <p class="code-line mt-4"><span class="text-mute">// buduję, uczę się, powtarzam</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- O MNIE -->
+    <section id="o-mnie" class="border-b border-line py-20 md:py-28">
+      <div class="mx-auto grid max-w-6xl gap-12 px-5 md:px-8 lg:grid-cols-2">
+        <div>
+          <p class="section-label">O mnie</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Frontend od podstaw</h2>
+          <p class="mt-4 text-fog leading-relaxed">
+            Nie udaję seniora. Uczę się systematycznie: layouty, responsywność, komponenty w Tailwindzie i logika w JavaScripcie.
+            Lubię, gdy strona wygląda czysto i działa tak samo na telefonie jak na desktopie.
+          </p>
+          <p class="mt-4 text-fog leading-relaxed">
+            Na razie skupiam się na solidnych fundamentach. Potem chcę przełożyć to na sklepy i customizację motywów Shopify.
+          </p>
+        </div>
+
+        <div class="grid gap-3 sm:grid-cols-2">
+          <div class="border border-line bg-panel p-5">
+            <p class="font-mono text-xs text-signal">01</p>
+            <h3 class="mt-2 font-semibold">Praktyka > teoria</h3>
+            <p class="mt-2 text-sm text-mute">Stworzyłem responsywny landing page portfolio w Tailwind CSS i JavaScript</p>
+          </div>
+          <div class="border border-line bg-panel p-5">
+            <p class="font-mono text-xs text-signal">02</p>
+            <h3 class="mt-2 font-semibold">Mobile first</h3>
+            <p class="mt-2 text-sm text-mute">Zaczynam od telefonu, potem dokładam desktop.</p>
+          </div>
+          <div class="border border-line bg-panel p-5">
+            <p class="font-mono text-xs text-signal">03</p>
+            <h3 class="mt-2 font-semibold">Czysty kod</h3>
+            <p class="mt-2 text-sm text-mute">Czytelne klasy, prosta struktura, bez zbędnego bałaganu.</p>
+          </div>
+          <div class="border border-line bg-panel p-5">
+            <p class="font-mono text-xs text-signal">04</p>
+            <h3 class="mt-2 font-semibold">Cel: Shopify</h3>
+            <p class="mt-2 text-sm text-mute">Uczę się pod sklepy, motywy i realne wdrożenia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UMIEJĘTNOŚCI -->
+    <section id="umiejetnosci" class="border-b border-line bg-panel py-20 md:py-28">
+      <div class="mx-auto max-w-6xl px-5 md:px-8">
+        <div class="max-w-2xl">
+          <p class="section-label">Umiejętności</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Stack, na którym stoję dziś</h2>
+          <p class="mt-3 text-fog">Poziomy pokazują, gdzie jestem w nauce</p>
+        </div>
+
+        <div class="mt-12 grid gap-8 lg:grid-cols-2">
+          <div class="space-y-6">
+            <div>
+              <div class="mb-2 flex items-center justify-between">
+                <span class="font-medium">HTML</span>
+                <span class="font-mono text-xs text-mute">solidne podstawy</span>
+              </div>
+              <div class="skill-bar"><span style="width: 85%"></span></div>
+            </div>
+            <div>
+              <div class="mb-2 flex items-center justify-between">
+                <span class="font-medium">CSS</span>
+                <span class="font-mono text-xs text-mute">layout · flex · grid</span>
+              </div>
+              <div class="skill-bar"><span style="width: 80%"></span></div>
+            </div>
+            <div>
+              <div class="mb-2 flex items-center justify-between">
+                <span class="font-medium">Tailwind CSS</span>
+                <span class="font-mono text-xs text-mute">codziennie w użyciu</span>
+              </div>
+              <div class="skill-bar"><span style="width: 75%"></span></div>
+            </div>
+            <div>
+              <div class="mb-2 flex items-center justify-between">
+                <span class="font-medium">JavaScript</span>
+                <span class="font-mono text-xs text-mute">w trakcie nauki</span>
+              </div>
+              <div class="skill-bar"><span style="width: 55%"></span></div>
+            </div>
+          </div>
+
+          <div class="border border-line bg-ink p-6">
+            <p class="font-mono text-xs uppercase tracking-wider text-mute">Tech I touch</p>
+            <ul class="mt-5 space-y-4">
+              <li class="flex items-start gap-3 border-b border-line pb-4">
+                <i class="fa-brands fa-html5 mt-1 text-xl text-[#e34f26]"></i>
+                <div>
+                  <p class="font-semibold">HTML</p>
+                  <p class="text-sm text-mute">Semantyka, formularze, struktura strony.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3 border-b border-line pb-4">
+                <i class="fa-brands fa-css3-alt mt-1 text-xl text-[#264de4]"></i>
+                <div>
+                  <p class="font-semibold">CSS + Tailwind</p>
+                  <p class="text-sm text-mute">Responsywne UI, spacing, hover.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3 border-b border-line pb-4">
+                <i class="fa-brands fa-js mt-1 text-xl text-[#f7df1e]"></i>
+                <div>
+                  <p class="font-semibold">JavaScript</p>
+                  <p class="text-sm text-mute">click, classList, proste menu.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-brands fa-shopify mt-1 text-xl text-[#95bf47]"></i>
+                <div>
+                  <p class="font-semibold">Shopify <span class="text-mute">(cel)</span></p>
+                  <p class="text-sm text-mute">Motywy i sklepy — w planie nauki.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NAUKA -->
+    <section id="nauka" class="border-b border-line py-20 md:py-28">
+      <div class="mx-auto max-w-6xl px-5 md:px-8">
+        <div class="max-w-2xl">
+          <p class="section-label">Nauka</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Gdzie jestem i dokąd idę</h2>
+          <p class="mt-3 text-fog">Uczę się krok po kroku — bez pośpiechu, ale regularnie.</p>
+        </div>
+
+        <div class="mt-12 space-y-6">
+          <div class="border border-line bg-panel p-5">
+            <p class="font-mono text-xs text-signal">zrobione</p>
+            <h3 class="mt-1 text-xl font-semibold">Fundamenty frontendu</h3>
+            <p class="mt-2 text-fog">HTML, CSS, responsywność, pierwsze strony w Tailwindzie.</p>
+          </div>
+          <div class="border border-signal bg-panel p-5">
+            <p class="font-mono text-xs text-warn">teraz</p>
+            <h3 class="mt-1 text-xl font-semibold">JavaScript w praktyce</h3>
+            <p class="mt-2 text-fog">Eventy, classList, proste interakcje na stronie.</p>
+          </div>
+          <div class="border border-line bg-panel p-5">
+            <p class="font-mono text-xs text-mute">następne</p>
+            <h3 class="mt-1 text-xl font-semibold">Projekty portfolio</h3>
+            <p class="mt-2 text-fog">Landingi i małe projekty, które mogę pokazać.</p>
+          </div>
+          <div class="border border-line bg-panel p-5">
+            <p class="font-mono text-xs text-mute">cel</p>
+            <h3 class="mt-1 text-xl font-semibold">Shopify + e‑commerce</h3>
+            <p class="mt-2 text-fog">Motywy, Liquid i wdrożenia sklepów.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOPIFY -->
+    <section id="shopify" class="border-b border-line bg-panel py-20 md:py-28">
+      <div class="mx-auto grid max-w-6xl gap-12 px-5 md:px-8 lg:grid-cols-2 lg:items-center">
+        <div>
+          <p class="section-label">Shopify</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Przygotowuję się pod sklepy</h2>
+          <p class="mt-4 text-fog leading-relaxed">
+            Shopify to mój następny duży krok. Najpierw chcę mieć pewne podstawy frontendu,
+            a potem wejść w motywy, Liquid i budowanie stron produktowych.
+          </p>
+          <ul class="mt-6 space-y-3 text-fog">
+            <li class="flex gap-3"><span class="text-signal">→</span> customizacja motywów</li>
+            <li class="flex gap-3"><span class="text-signal">→</span> strony produktu i landingi</li>
+            <li class="flex gap-3"><span class="text-signal">→</span> łączenie designu z sprzedażą</li>
+          </ul>
+        </div>
+
+        <div class="border border-line bg-ink">
+          <div class="border-b border-line px-5 py-4">
+            <p class="font-mono text-xs text-mute">roadmap / shopify</p>
+          </div>
+          <div class="flex items-center justify-between border-b border-line px-5 py-4">
+            <span>Frontend basics</span>
+            <span class="font-mono text-xs text-signal">done</span>
+          </div>
+          <div class="flex items-center justify-between border-b border-line px-5 py-4">
+            <span>JS + interakcje</span>
+            <span class="font-mono text-xs text-warn">in progress</span>
+          </div>
+          <div class="flex items-center justify-between border-b border-line px-5 py-4">
+            <span>Shopify themes</span>
+            <span class="font-mono text-xs text-mute">queued</span>
+          </div>
+          <div class="flex items-center justify-between px-5 py-4">
+            <span>Liquid / sections</span>
+            <span class="font-mono text-xs text-mute">queued</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="kontakt" class="py-20 md:py-28">
+      <div class="mx-auto max-w-6xl px-5 md:px-8">
+        <div class="border border-line bg-panel px-6 py-10 md:px-10 md:py-14">
+          <p class="section-label">Kontakt</p>
+          <h2 class="mt-3 max-w-xl text-3xl font-bold tracking-tight sm:text-4xl">
+            Chcesz pogadać o współpracy albo nauce?
+          </h2>
+          <p class="mt-4 max-w-lg text-fog">
+            Jestem otwarty na proste zlecenia, feedback i projekty, przy których mogę się rozwijać.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="mailto:hello@klewa.dev" class="btn-primary">
+              <i class="fa-solid fa-envelope"></i>
+              Napisz maila
+            </a>
+            <a href="https://github.com/Kacp4r3/Kacper-Lewandowski---Portfolio" target="_blank" class="btn-ghost">
+              <i class="fa-brands fa-github"></i>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-line py-8">
+    <div class="mx-auto flex max-w-6xl flex-col gap-4 px-5 text-sm text-mute md:flex-row md:items-center md:justify-between md:px-8">
+      <p class="font-mono">Kacper Lewandowski</p>
+      <p>Junior Frontend · HTML · CSS · Tailwind · JS · → Shopify</p>
+      <p>© 2026</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
